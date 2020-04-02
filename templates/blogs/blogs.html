@@ -1,0 +1,10 @@
+<h1> hello this is blogs</h1>
+{%  if blogs %}
+  {% for blog in blogs %}
+  <ul class="list-group">
+      <a href="{% url 'blog_details' blog.id  %}"><li class="list-group-item">{{ blog.title }}</li></a>
+  </ul>
+  {% endfor %}
+    {% else %}
+<h1>no block</h1>
+{% endif %}
